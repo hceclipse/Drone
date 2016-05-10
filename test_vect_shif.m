@@ -74,13 +74,15 @@ for loop = 1:length(Cx)
     
 end
 
+figure(1);
+hold on;
 
-% Ex=E(:,1);
-% Ex(length(E)+1)=E(1,1);
-%
-% Ey=E(:,2);
-% Ey(length(E)+1)=E(1,2);
-% plot(Ex,Ey)
+plot(Cx,Cy);
+Ex=E(:,1);
+Ex(length(E)+1)=E(1,1);
 
+Ey=E(:,2);
+Ey(length(E)+1)=E(1,2);
+plot(Ex,Ey)
 
-% hold off;
+hold off;

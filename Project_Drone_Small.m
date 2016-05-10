@@ -5,8 +5,11 @@ clc
 %% Defining the shape of our field
 
 % Shape that is square like
-Cx = [300 300 0 0];   % X position of the vectors
-Cy = [300 0 0 300];    % Y position of the vectors
+% Cx = [300 300 0 0];   % X position of the vectors
+% Cy = [300 0 0 300];    % Y position of the vectors
+
+Cx = [97 123 35 -12 -28 29];
+Cy = [108 53 -3 11 80 21];
 
 nomber_pts = length(Cx);
 
@@ -36,22 +39,22 @@ array_final = Circle_3pts(array_circle_pts,array_circle_pts2,Circle_pnt_3);
 
 %% Adding objects
 
+% Ox = [10 20 5 0];
+% Oy = [30 5 5 10];
+% array_final = Obsticals(Ox,Oy,array_final);
+
+% Ox = [80 80 40 40];
+% Oy = [80 40 40 80];
+% array_final = Obsticals(Ox,Oy,array_final);
 
 
-Ox = [80 80 40 40];
-Oy = [80 40 40 80];
-array_final = Obsticals(Ox,Oy,array_final);
 
-Ox = [10 20 5 0];
-Oy = [30 5 5 10];
-array_final = Obsticals(Ox,Oy,array_final);
-
-Ox = [10 20 5 0];
-Oy = [230 205 205 210];
-figure(69);
-plot(Ox,Oy,'o')
-pause
-array_final = Obsticals(Ox,Oy,array_final);
+% Ox = [10 20 5 0];
+% Oy = [230 205 205 210];
+% % figure(69);
+% % plot(Ox,Oy,'o')
+% % pause
+% array_final = Obsticals(Ox,Oy,array_final);
 
 % Ox = [251 252 231 231];
 % Oy = [253 235 232 262];

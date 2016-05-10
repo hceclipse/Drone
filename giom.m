@@ -1,9 +1,21 @@
-A = [0 0]
-B = [5 5]
-C = [3 3]
-D = [-3 -3]
+close all
+clear all
+clc
+
+A = [0 0];
+% B = [-4 5];
+B = [4 -5];
+C = [3 3];
 
 AB = B - A;
-CD = D - C;
+AC = C - A;
+figure(1);
+hold on;
+plot(A(1),A(2),'o');
+plot(B(1),B(2),'o');
+plot(C(1),C(2),'o');
 
-angle = acos(dot(AB,CD) / (norm(AB)*norm(CD)));
+
+hold off;
+
+angle = acos(dot(AB,AC) / (norm(AB)*norm(AC)))
