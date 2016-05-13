@@ -5,20 +5,29 @@ clc
 %% Defining the shape of our field
 
 % Shape that is square like
-% Cx = [300 300 0 0];   % X position of the vectors
-% Cy = [300 0 0 300];    % Y position of the vectors
+Cx = [300 300 0 0];   % X position of the vectors
+Cy = [300 0 0 300];    % Y position of the vectors
 
-Cx = [97 123 35 -12 -28 29];
-Cy = [108 53 -3 11 80 21];
+% Cx = [97 123 35 -12 -28 29];
+% Cy = [108 53 -3 11 80 21];
 
 nomber_pts = length(Cx);
 
 %% Fonction that gives us the first points in the field
-First_points_saved = First_Points(nomber_pts,Cx,Cy);
-
+First_points_saved = First_Points(nomber_pts,Cx,Cy)
+figure(2);
+hold on;
+plot(First_points_saved(1,2),First_points_saved(2,2),'o')
+plot(Cx(2),Cy(2),'*');
+% plot(First_points_saved(1,3),First_points_saved(2,3),'x')
+% plot(Cx(3),Cy(3),'x');
+Pause
 %% Gives the new point shifted and the stoppes at the end if no more points needed
 [All_points_square,array_points] = Shifting_stopping(Cx,Cy,First_points_saved);
-
+figure(8);
+plot(All_points_square(:,1),All_points_square(:,2));
+figure(9);
+plot(array_points(:,1),array_points(:,2));
 % figure(99);
 % hold on;
 % for loop = 1:size(All_points_square,1)
@@ -39,9 +48,9 @@ array_final = Circle_3pts(array_circle_pts,array_circle_pts2,Circle_pnt_3);
 
 %% Adding objects
 
-% Ox = [10 20 5 0];
-% Oy = [30 5 5 10];
-% array_final = Obsticals(Ox,Oy,array_final);
+Ox = [10 20 5 0];
+Oy = [30 5 5 10];
+array_final = Obsticals(Ox,Oy,array_final);
 
 % Ox = [80 80 40 40];
 % Oy = [80 40 40 80];
