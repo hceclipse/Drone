@@ -5,11 +5,11 @@ clc
 %% Defining the shape of our field
 
 % Shape that is square like
-Cx = [300 300 0 0];   % X position of the vectors
-Cy = [300 0 0 300];    % Y position of the vectors
+% Cx = [300 300 0 0];   % X position of the vectors
+% Cy = [300 0 0 300];    % Y position of the vectors
 
-% Cx = [97 123 35 -12 -28 29];
-% Cy = [108 53 -3 11 80 21];
+Cx = [970 1230 350 -120 -280 290];
+Cy = [1080 530 -30 110 800 210];
 
 % Cx = [72,63,-23,14];
 % Cy = [158,-37,52,112];
@@ -32,17 +32,17 @@ hold off;
 
 figure(2);
 hold on;
-plot(Cx,Cy,'r');
-plot(All_points_square(:,1),All_points_square(:,2),'b');
+% plot(Cx,Cy,'r');
+plot(All_points_square(1,:),All_points_square(2,:),'b');
 hold off;
 %% Gives the points to make the circle
-%          [array_circle_pts,array_circle_pts2] = add_points_circle(All_points_square,nomber_pts);
+         [array_circle_pts,array_circle_pts2] = add_points_circle(All_points_square,nomber_pts);
 
 %% Gives the
-%             [Vector_circle_pnt_3,Circle_pnt_3,mPoint]= add_3_point_circle(array_circle_pts,array_circle_pts2,array_points);
+            [Vector_circle_pnt_3,Circle_pnt_3,mPoint]= add_3_point_circle(array_circle_pts,array_circle_pts2,array_points);
 
 %% Gives the circle
-%           array_final = Circle_3pts(array_circle_pts,array_circle_pts2,Circle_pnt_3);
+          array_final = Circle_3pts(array_circle_pts,array_circle_pts2,Circle_pnt_3);
 
 %% Adding objects
 

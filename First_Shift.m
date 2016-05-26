@@ -58,9 +58,9 @@ for loop = 1:length(Cx)
         b_x2_first = b_x2;
     else
         
-        E(loop,:) = collision(a_x2,b_x2,b_x2_last,a_x2_last);
+        E(loop,:) = collision2(a_x2,b_x2,b_x2_last,a_x2_last);
         if loop == length(Cx)
-            E(1,:) = collision(a_x2,b_x2,a_x2_first,b_x2_first);
+            E(1,:) = collision2(a_x2,b_x2,a_x2_first,b_x2_first);
         end
     end
     

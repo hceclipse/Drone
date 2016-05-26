@@ -1,5 +1,5 @@
 function E = collision2(A,B,C,D)
-% The variables A,B,C et D are the position of the points 
+% The variables A,B,C et D are the position of the points
 % every variable is composed of his 2d position (x,y)
 % the output E is the position of the 2d intersection (x_colision,Y_colision)
 Ax = A(1);
@@ -33,11 +33,10 @@ if or(isnan(mu),isnan(lambda))
     newE = collision2(newA,newB,newC,newD);
     E = rotationMatrix(-angle) * [newE(1); newE(2)];
 else
-    % if and(mu >= 0, and(mu <= 1, and(lambda>=0,lambda<=1))) % Prends en compte les extrémitées des droites.
+    %     if and(mu >= 0, and(mu <= 1, and(lambda>=0,lambda<=1))) % Prends en compte les extrémitées des droites.
     if and(mu > 0, and(mu < 1, and(lambda>0,lambda<1))) % ne prend aucune extremité d'aucune droite (juste premier/dernier point)
         E = A+lambda*AB;
     else
         E = [NaN NaN];
-    %     E = [mu lambda A+lambda*AB];
     end
 end

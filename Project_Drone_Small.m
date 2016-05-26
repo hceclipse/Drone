@@ -21,7 +21,7 @@ plot(First_points_saved(1,2),First_points_saved(2,2),'o')
 plot(Cx(2),Cy(2),'*');
 % plot(First_points_saved(1,3),First_points_saved(2,3),'x')
 % plot(Cx(3),Cy(3),'x');
-Pause
+% Pause
 %% Gives the new point shifted and the stoppes at the end if no more points needed
 [All_points_square,array_points] = Shifting_stopping(Cx,Cy,First_points_saved);
 figure(8);
